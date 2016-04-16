@@ -196,7 +196,14 @@ namespace GibbASN1
             if(char.IsUpper((char) c))
             {
                 string typeref = ParseTypeOrID(c);
-                tokenQueue.Enqueue(new Token(Token.TokenType.TypeReference, typeref));
+                if(reservedWords.Contains(typeref))
+                {
+                    tokenQueue.Enqueue(new Token(Token.TokenType.ReservedWord, typeref));
+                }
+                else
+                {
+                    tokenQueue.Enqueue(new Token(Token.TokenType.TypeReference, typeref));
+                }
                 return true;
             }
             if(char.IsLower((char) c))
@@ -238,7 +245,7 @@ namespace GibbASN1
                 if(c == '/' && input.Peek() == '*')
                 {
                     input.Read(); //consume '*'
-                    ConsumeMultiLineComment();
+                    ConsumeMultiLineComment(); //per spec, nesting comments is allowed, but all opening /* must be closed by corresponding */
                 }
                 c = input.Read(); //move to next char
             }

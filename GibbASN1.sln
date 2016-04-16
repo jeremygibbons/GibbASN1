@@ -1,11 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.24720.0
+VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GibbASN1", "GibbASN1\GibbASN1.csproj", "{E2C95CDD-1FB3-459E-9097-03D6E7025393}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GibbASN1TestApp", "GibbASN1TestApp\GibbASN1TestApp.csproj", "{225468C8-9C3C-4CF4-A694-6BAB4FF87D28}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{02B6115E-9359-4960-8F08-C03601CC06F0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

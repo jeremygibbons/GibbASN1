@@ -5,6 +5,7 @@
         public enum TokenType
         {
             Empty = 0,
+            ReservedWord,
             TypeReference,
             Identifier,
             ValueReference,
